@@ -9,8 +9,13 @@
 	"categories": [
 		"Other"
 	],
+	"keywords": [
+		"autocomplete",
+		"latex"
+	],
+    "homepage": "https://github.com/andyljones/tablatex",
 	"activationEvents": [
-		"onCommand:tablatex.helloWorld"
+		"*"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
