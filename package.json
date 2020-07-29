@@ -3,6 +3,7 @@
 	"displayName": "tablatex",
 	"description": "Tab complete for LaTeX characters",
 	"version": "0.0.1",
+	"publisher": "andyljones",
 	"engines": {
 		"vscode": "^1.47.0"
 	},
@@ -14,6 +15,10 @@
 		"latex"
 	],
 	"homepage": "https://github.com/andyljones/tablatex",
+	"repository": {
+		"type": "git", 
+		"url": "https://github.com/andyljones/tablatex.git"
+	},
 	"license": "See LICENSE file",
 	"activationEvents": [
 		"*"
