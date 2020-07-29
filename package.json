@@ -2,7 +2,7 @@
 	"name": "tablatex",
 	"displayName": "tablatex",
 	"description": "Tab complete for LaTeX characters",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "andyljones",
 	"engines": {
 		"vscode": "^1.47.0"
@@ -16,7 +16,7 @@
 	],
 	"homepage": "https://github.com/andyljones/tablatex",
 	"repository": {
-		"type": "git", 
+		"type": "git",
 		"url": "https://github.com/andyljones/tablatex.git"
 	},
 	"license": "See LICENSE file",
@@ -24,8 +24,7 @@
 		"*"
 	],
 	"main": "./out/extension.js",
-	"contributes": {
-	},
+	"contributes": {},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
