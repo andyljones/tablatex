@@ -1,22 +1,24 @@
 import * as vscode from 'vscode';
 import * as SYMBOLS from './latex-unicode.json';
 
-// let orange = vscode.window.createOutputChannel("Orange");
-
 class Provider {
 
 	provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken): vscode.ProviderResult<vscode.CompletionItem[]> {
 		var completions: vscode.CompletionItem[] = [];
 		Object.entries(SYMBOLS).forEach((entry) => {
+
 			let item = new vscode.CompletionItem(entry[0], vscode.CompletionItemKind.Text);
 			item.insertText = entry[1];
+
 			// I have no idea what a good regex for LaTeX symbol codes looks like.
-			item.range = document.getWordRangeAtPosition(position, /(?=\\)[\w\\]+/);
+			let word = document.getWordRangeAtPosition(position, /(?=\\)[\w\\]+/)
 
-			// Cut off at the current cursor position, so that I can tab-complete as I edit
-			item.range = item.range?.with(undefined, position.translate(undefined, -1));
+			// Cut off at the current cursor position, so that I can tab-complete when inserting
+			// latex into an existing word.
+			let start = new vscode.Position(position.line, 0);
+			let upto = new vscode.Range(start, position);
 
-			// orange.appendLine(item.range?.end);
+			item.range = word?.intersection(upto);
 
 			completions.push(item);
 		});
