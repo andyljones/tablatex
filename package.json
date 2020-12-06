@@ -2,7 +2,7 @@
 	"name": "tablatex",
 	"displayName": "tablatex",
 	"description": "Tab complete for LaTeX characters",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"publisher": "andyljones",
 	"engines": {
 		"vscode": "^1.47.0"
