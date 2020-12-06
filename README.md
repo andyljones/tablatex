@@ -1,5 +1,5 @@
 ## Instructions
-1. Install the extension
+1. Install [the extension](https://marketplace.visualstudio.com/items?itemName=andyljones.tablatex).
 2. Type '\alpha'
 3. Hit tab.
 
